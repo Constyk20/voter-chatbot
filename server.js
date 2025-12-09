@@ -107,7 +107,7 @@ app.post('/api/chat', async (req, res) => {
           content: `${userMessage}\n\nContext from database: ${context}`
         }
       ],
-      model: 'llama3-8b-8192',
+      model: 'llama-3.1-8b-instant',
       temperature: 0.7,
       max_tokens: 200,
     });
@@ -143,4 +143,5 @@ app.get('/api/health', (req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => console.log(`Server buzzing on port ${PORT}—let's get Nigerians voting! 🌟`));
